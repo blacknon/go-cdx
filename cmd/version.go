@@ -7,10 +7,10 @@ import (
 
 var version Version = Version{
 	Major:  1,
-	Minor:  1,
-	Build:  21,
-	Status: "Stable",
-	Date:   "2018/08/27",
+	Minor:  2,
+	Build:  22,
+	Status: "Beta",
+	Date:   "2018/09/01",
 }
 
 type Version struct {
