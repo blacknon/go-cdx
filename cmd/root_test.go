@@ -8,6 +8,7 @@ import (
 func TestAllRoot(t *testing.T) {
 	t.Run("init", func(t *testing.T) {
 		expect := fmt.Sprintf(`cdx(){
+	[[ "$@" =~ ".*--stdin.*" ]] && cat > /tmp/cdxStdin
 	eval "$(%s $@)"
 }
 [ -f %s ] || echo -n "[]" > %s

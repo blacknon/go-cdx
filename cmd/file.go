@@ -55,6 +55,7 @@ func getPathWithFinderFromFile(p string) string {
 		[]string{"awk", "{print $NF}"},
 	)
 	if err != nil {
+		Print("fatal in getPathWithFinderFromFile")
 		Fatal(err)
 		os.Exit(1)
 	}
@@ -101,7 +102,7 @@ func printCustomSources() {
 
 func getPathWithFinder() (string, error) {
 	if fromStdin {
-		return getPathFromStdin(os.Stdin), nil
+		return getPathFromStdin(), nil
 	} else if useBookmark {
 		return getPathWithFinderFromFile(config.BookMarkFile), nil
 	} else if useHistory {

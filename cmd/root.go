@@ -146,7 +146,7 @@ func init() {
 	//action
 	rootCmd.Flags().StringVarP(&actionCommand, "action", "A", "", "移動先で自動的に実行するコマンドを指定できます")
 	//stdin
-	rootCmd.Flags().BoolVarP(&fromStdin, "stdin", "S", false, "Stdinから移動先のリストを受け取ります")
+	rootCmd.Flags().BoolVar(&fromStdin, "stdin", false, "Stdinから移動先のリストを受け取ります")
 }
 
 // flags

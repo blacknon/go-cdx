@@ -17,6 +17,7 @@ func PrintInitText() {
 
 func getInitText() string {
 	return fmt.Sprintf(`cdx(){
+	[[ "$@" =~ ".*--stdin.*" ]] && cat > /tmp/cdxStdin
 	eval "$(%s $@)"
 }
 [ -f %s ] || echo -n "[]" > %s
